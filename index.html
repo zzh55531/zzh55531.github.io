@@ -6,12 +6,26 @@
     <meta name="description" content="纯个人网站，服务器在国外，我在这想干啥干啥"/>
     <link rel="stylesheet" href="css/master.css">
     <title>张仲恒的网站</title>
-  
+    <script type="text/javascript">
+    (function(doc,win){
+          var docEl =doc.documentElement,
+                  resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                  recalc = function(){
+                      var clientWidth = docEl.clientWidth>375 ? 375 :docEl.clientWidth;
+                      if (!clientWidth) {return};
+                      docEl.style.fontSize = 16 * (clientWidth/375) + 'px';
+                  };
+          recalc();
+          if (!doc.addEventListener) return;
+          win.addEventListener(resizeEvt, recalc, false);
+          doc.addEventListener('DOMContentLoaded', recalc, false);
+      })(document,window)
+    </script>
   </head>
   <body>
     <header>
       <div id="logo">
-        <a href="index.html">PilotSam</a>
+        <a href="https://pilotsam.cn/">PilotSam</a>
       </div>
 
       <div id="nav">
