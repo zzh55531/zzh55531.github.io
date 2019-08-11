@@ -1,0 +1,44 @@
+a{
+	text-decoration: none;
+}
+
+::selection{background: #59d6ff; color: white;}
+::-moz-selection{background: #59d6ff; color: white;}
+body{
+	margin: 0px;
+	background-color: gray;
+}
+#logo{
+	width: auto;
+	float: left;
+}
+#nav{
+	float:right;
+	width: auto;
+}
+
+header{
+	min-height: 100px;
+	overflow: hidden;
+	width: 90%;
+	margin-left: 5%;
+	color:white;
+}
+header a{
+	color: white;
+}
+header ul li{
+	list-style:none;
+	float: left;
+	padding: 0px 0px 5px 0px;
+	margin: 10px 10px 0px 10px;
+	font-size: 1.5em;
+	font-family:Sans-serif;
+	transition:all 0.3s;
+	letter-spacing: 1px;
+	font-weight: 200;
+}
+header ul li:hover{
+	border-bottom: 2px solid white;
+	color: white;
+}
