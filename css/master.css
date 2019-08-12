@@ -2,25 +2,40 @@ a{
 	text-decoration: none;
 }
 html{
+	height: 100%;
+	overflow: hidden;
 	font-size: 16px;
 }
-
 ::selection{background: #59d6ff; color: white;}
 ::-moz-selection{background: #59d6ff; color: white;}
 body{
 	margin: 0px;
-	background-color: gray;
+	background-color: white;
 }
 #logo{
 	width: 39%;
 	float: left;
 	font-size: 1.5rem;
 	font-family:Sans-serif;
-	margin-top: 2rem;
+	margin-top: 1.5rem;
+	padding: 0.1rem 0 0.2rem 0;
 }
-#nav{
+#logo a{
+	color: #3399FF;
+}
+nav{
 	float:right;
 	width: 60%;
+}
+.current_page{
+	background-color: #66CCFF;
+}
+.current_page a{
+	color: white;
+}
+nav a{
+	color: #006699;
+	transition: all 0.3s;
 }
 
 header{
@@ -30,9 +45,7 @@ header{
 	margin-left: 3%;
 	color:white;
 }
-header a{
-	color: white;
-}
+
 header ul{
 	margin: 0px;
 	padding: 0px;
@@ -41,47 +54,67 @@ header ul{
 header ul li{
 	list-style:none;
 	float: left;
-
-	margin: 2rem 0.3rem 0px 0.3rem;
+	border-radius: 0.7rem;
+	padding: 0.1rem 0.5rem 0.2rem 0.5rem;
+	margin-top: 1.5rem;
 	font-size: 1.5rem;
 	font-family:Sans-serif;
 	transition:all 0.3s;
-	font-weight: 200;
 }
 header ul li:hover{
-	border-bottom: 0.1rem solid white;
+	background-color: #0689FF;
+}
+a:hover{
 	color: white;
 }
 
-@media screen and (max-width: 375px) {
+footer{
+	height: 100%;
+	background-color: #003399;
+	color: white;
+	font-size: 0.8rem;
+	padding: 1rem 0 2rem 2rem;
+	font-family: sans-serif;
+	letter-spacing: 1px;
+}
+footer a{
+	color: white;
+}
+@media screen and (max-width: 420px) {
 	#logo{
-		margin: auto;
+		margin: 0.5em auto;
 		width: 30%;
 		float: none;
 	}
-	#nav{
+	nav{
 		float: none;
 		width: auto;
-		margin: auto;
-		height: auto;
+		margin: 0 auto;
 	}
 	header ul{
 		float: none;
-		margin: auto;
+		margin:0 auto;
 		width: auto;
-		height: 2rem;
 	}
 	header ul li{
-		list-style:none;
-		float: left;
-		margin: 2rem 0.3rem 0px 0.4rem;
-		font-size: 1.5rem;
-		font-family:Sans-serif;
-		transition:all 0.3s;
-		font-weight: 200;
+		font-size: 1.7rem;
+		margin-top: 0em;
+		padding: 0.1rem 0.4rem 0.1rem 0.35rem;
 	}
-	header ul li:hover{
-		border-bottom: 0.1rem solid white;
-		color: white;
+}
+@media screen and (max-width: 390px) {
+	header ul li{
+		font-size: 1.5rem;
+	}
+}
+@media screen and (max-width: 360px) {
+	header ul li{
+		padding: 0.1rem 0.3rem 0.1rem 0.3rem;
+	}
+}
+@media screen and (max-width: 320px) {
+	header ul li{
+		font-size: 1.3rem;
+		padding: 0.1rem 0.25rem 0.1rem 0.25rem;
 	}
 }
